@@ -22,6 +22,11 @@ body {
     height: 50px;
     width: 150px;
     opacity: 1;
+    transition-duration: 0.3s;
+  }
+
+  .myButton:hover {
+    background-color: skyblue;
   }
 
 code {
@@ -30,19 +35,31 @@ code {
 }
  
 #welcome {
-    margin-top: 0px;
-    font-size: 3rem;
-    font-weight: 800;
-    text-align: center;
+    margin-top: 40px;
+    font-size: 2rem;
+    text-align: left;
     padding: 80px;
     margin-bottom: 500px;
+}
+
+#welcomeText {
+  float: left;
+  width: 50%;
+  font-size: 2rem;
+  color: black;
+}
+
+#keyWord {
+  color: steelblue;
+  font-size: 3rem;
+  font-weight: 600;
 }
  
 #projects {
     margin-top: 500px;
     font-size: 3rem;
     font-weight: 800;
-    text-align: center;
+    text-align: left;
     padding: 80px;
 }
 
@@ -50,17 +67,9 @@ code {
     margin-top: 500px;
     font-size: 3rem;
     font-weight: 800;
-    text-align: center;
+    text-align: left;
     padding: 80px;
 }
- 
-/* button {
-    font-size: 1.5rem;
-    padding: 10px 20px;
-    margin-right: 10px;
-    cursor: pointer;
-    color: black;
-} */
 
 @keyframes fadeInDown {
     0% {

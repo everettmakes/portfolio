@@ -2,16 +2,33 @@ import React from "react";
  
 const Welcome = () => {
     return (
-        <div id="welcome">Joshua Everett</div>
+        <div id="welcome">
+        <div id="welcomeText">
+        <div id="keyWord">Welcome!</div>
+        <b>I am Joshua Everett, an aspiring Machine Learning Engineer currently studying Computer Science at the University of Bristol. 
+        This portfolio highlights my projects and skills, 
+        showcasing my dedication to mastering machine learning and more.</b>
+        </div>
+        <div id="welcomeImage">
+        </div>
+        </div>
     );
 };
  
 const Projects = () => {
-    return <div id="projects">Here are some of the projects I have completed</div>;
+    return <div id="projects">
+        <div id="keyWord">
+            Here are some of my projects...
+            </div>
+        </div>;
 };
 
 const Contact = () => {
-    return <div id="contact">Get in touch</div>;
+    return <div id="contact">
+        <div id="keyWord">
+        Get in touch!
+        </div>
+        </div>;
 };
  
 const HomePage = () => {
