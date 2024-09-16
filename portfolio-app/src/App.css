@@ -14,6 +14,7 @@ body {
     font-weight: 600;
     font-size: 20px;
     outline: none;
+    z-index: 100;
     border-radius: 50px;
     cursor: pointer;
     color: #141414;
@@ -26,6 +27,7 @@ body {
   }
 
   .myButton:hover {
+    z-index: 100;
     background-color: skyblue;
   }
 
@@ -60,6 +62,7 @@ code {
     font-size: 3rem;
     font-weight: 800;
     text-align: left;
+    height: 80vh;
     padding: 80px;
 }
 
@@ -83,6 +86,7 @@ code {
   }
   
   .sticky {
+    z-index: 1000;
     position: fixed;
     top: 0;
     width: 100%;
@@ -91,3 +95,13 @@ code {
     animation-timing-function: ease-out;
   }
 
+  .responsive-canvas {
+    height: 80%; /* Adjust height as needed */
+    width: 100%; /* Full width */
+  }
+  
+  @media (max-width: 600px) {
+    .responsive-canvas {
+      height: 60vh; /* Adjust height for smaller screens */
+    }
+  }

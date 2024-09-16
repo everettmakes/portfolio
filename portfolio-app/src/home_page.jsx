@@ -1,4 +1,5 @@
 import React from "react";
+import ProjectsCanvas from "./ProjectsCanvas.jsx";
  
 const Welcome = () => {
     return (
@@ -18,8 +19,9 @@ const Welcome = () => {
 const Projects = () => {
     return <div id="projects">
         <div id="keyWord">
-            Here are some of my projects...
-            </div>
+            My projects...
+        </div>
+        <ProjectsCanvas />
         </div>;
 };
 
