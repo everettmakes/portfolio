@@ -1,5 +1,6 @@
 import React from "react";
- 
+import ProjectsGrid from "./projects_grid";
+
 const Welcome = () => {
     return (
         <div id="welcome">
@@ -19,7 +20,8 @@ const Projects = () => {
     return <div id="projects">
         <div id="keyWord">
             Here are some of my projects...
-            </div>
+        </div>
+        <ProjectsGrid />
         </div>;
 };
 

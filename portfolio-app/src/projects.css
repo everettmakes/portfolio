@@ -1,0 +1,74 @@
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  gap: 20px;
+  justify-content: center; /* Center the grid horizontally */
+  max-width: 1200px; /* Set a maximum width for the grid */
+  margin: 0 auto; /* Center the grid container in the viewport */
+}
+
+.project-item {
+/*
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    position: relative;
+    height: 180px; /* Fixed height to maintain the size 
+    overflow: hidden;  Prevent overflow when description is hidden */
+
+    background-color: white;
+    border: 1px solid rgba(205, 171, 171, 0.6);
+    font-weight: 600;
+    font-size: 20px;
+    outline: none;
+    border-radius: 50px;
+    cursor: pointer;
+    color: #141414;
+    float: center;
+    margin: 5px;
+    height: 300px;
+    width: 300px;
+    opacity: 1;
+    transition-duration: 0.3s;
+    display: flex;
+
+    justify-content: center; /* Horizontal centering */
+    align-items: center;     /* Vertical centering */
+  }
+
+  .project-item:hover {
+    background-color: skyblue;
+  }
+
+/* Reserve space for the description but keep it hidden */
+.project-description {
+  opacity: 0;
+  max-height: 0;
+  transition: opacity 0.3s ease, max-height 0.3s ease;
+  font-size: 0.9em;
+  color: #555;
+}
+
+/* When hovering over the item, reveal the description */
+.project-item:hover .project-description {
+  opacity: 1;
+  max-height: 100px; /* Ensure the description fits within the reserved space */
+}
+
+h3 {
+  left: 250;
+}
+
+.click-info {
+  font-size: 0.9em;
+  color: #888;
+}
+
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr; /* Stack on mobile */
+  }
+}
