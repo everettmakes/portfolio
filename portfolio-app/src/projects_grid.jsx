@@ -52,8 +52,10 @@ const Project = ({ project }) => {
       style={{ backgroundImage: `url(${project.img})` }} // Apply the background image
       aria-label={`View details of ${project.title}`}
     >
+      <div className="project-content">
       <h3>{project.title}</h3>
       <p className="project-description">{project.description}</p>
+      </div>
     </div>
   );
 };

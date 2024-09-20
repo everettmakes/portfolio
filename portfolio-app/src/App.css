@@ -36,17 +36,18 @@ code {
 section {
   height: 100vh; /* Full viewport height */
   display: flex;
-  justify-content: center;
-  align-items: center;
   scroll-snap-align: start; /* For smooth snapping */
 }
 
 #welcomeSection {
-  text-align: left;
+  justify-content: center;
+  align-items: center;
   padding-left: 100px;
 }
 
 #projectsSection {
+  padding-top: 50px;
+  padding-left: 100px;
   background-color: #f0f0f0; /* Optional: Different background for visibility */
 }
 
@@ -104,6 +105,7 @@ section {
 
 /* Projects Section Text Styling */
 #projects {
+  float: left;
   margin-top: 50px;
   font-size: 3rem;
   font-weight: 800;
@@ -112,11 +114,8 @@ section {
 
 /* Contact Section Text Styling */
 #contact {
-  margin-top: 250px;
   font-size: 3rem;
   font-weight: 800;
-  text-align: left;
-  padding: 80px;
 }
 
 #welcomeImage {

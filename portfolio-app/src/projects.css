@@ -1,12 +1,11 @@
-/* Grid layout */
 .projects-grid {
   padding-top: 30px;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr); /* Adjust the number of columns as needed */
   gap: 20px;
-  justify-content: center;
-  max-width: 1200px;
-  margin: 0 auto;
+  justify-content: start; /* Align items to the left */
+  max-width: 100%; /* Ensure the grid takes full width of the container */
+  margin: 0; /* Remove auto margin to align to the left */
 }
 
 /* Styling for each project item */
@@ -31,13 +30,31 @@
   overflow: hidden;
   background-size: cover;
   background-position: center;
+  position: relative; /* To ensure child elements are positioned correctly */
 }
 
-/* Hover effect */
-.project-item:hover {
-  background-color: rgba(135, 206, 250, 0.8);
-  transform: scale(1.05);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow on hover */
+/* Container for title and description to share the same background */
+.project-content {
+  opacity: 0;
+  background-color: skyblue;/* Shared blue background */
+  border-radius: 10px;
+  padding: 10px;
+  transition: opacity 0.3s ease, max-height 0.3s ease;
+  z-index: 2; /* Above the image */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  max-height: 0; /* Initially hidden */
+  overflow: hidden;
+}
+
+/* Show the content container on hover */
+.project-item:hover .project-content {
+  opacity: 1;
+  max-height: 200px; /* Expand to fit the content */
 }
 
 /* Project title styling */
@@ -45,40 +62,21 @@
   font-size: 1.5em;
   margin: 0;
   line-height: 1.4em;
-  flex-grow: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px;
-  color: skyblue;
-  /*background-color: rgba(255, 255, 255, 0.8); /* Background for readability */
-  background-color: #f0f0f0;
-  border-radius: 10px;
-  opacity: 0; /* Initially hidden */
-  transition: opacity 0.3s ease; /* Smooth transition */
+  color: white; /* Change the color to white for better contrast */
 }
 
 /* Hidden description before hover */
 .project-description {
-  opacity: 0; /* Initially hidden */
-  max-height: 0; /* Prevent overflow */
-  transition: opacity 0.3s ease, max-height 0.3s ease;
   font-size: 0.9em;
-  color: whitesmoke;
-  padding: 10px;
-  border-radius: 10px;
+  color: white;
   margin-top: 10px;
 }
 
-/* Show title and description on hover */
-.project-item:hover h3 {
-  opacity: 1;
-}
-
-.project-item:hover .project-description {
-  opacity: 1; 
-  max-height: 100px; /* Show description on hover */
-  background-color: #f0f0f0; /* Background for visibility */
+/* Hover effect */
+.project-item:hover {
+  background-color: whitesmoke;
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow on hover */
 }
 
 /* Media query for mobile devices */
