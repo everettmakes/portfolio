@@ -1,4 +1,6 @@
+/* Grid layout */
 .projects-grid {
+  padding-top: 30px;
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* 3 columns */
   gap: 20px;
@@ -7,43 +9,47 @@
   margin: 0 auto; /* Center the grid container in the viewport */
 }
 
+/* Styling for each project item */
 .project-item {
-/*
-    padding: 20px;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    position: relative;
-    height: 180px; /* Fixed height to maintain the size 
-    overflow: hidden;  Prevent overflow when description is hidden */
+  background-color: white;
+  border: 1px solid rgba(205, 171, 171, 0.6);
+  font-weight: 600;
+  font-size: 20px;
+  border-radius: 50px;
+  cursor: pointer;
+  color: #141414;
+  margin: 5px;
+  height: 300px;
+  width: 300px;
+  opacity: 1;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centers title and description */
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  overflow: hidden; /* Prevent content overflow */
+}
 
-    background-color: white;
-    border: 1px solid rgba(205, 171, 171, 0.6);
-    font-weight: 600;
-    font-size: 20px;
-    outline: none;
-    border-radius: 50px;
-    cursor: pointer;
-    color: #141414;
-    float: center;
-    margin: 5px;
-    height: 300px;
-    width: 300px;
-    opacity: 1;
-    transition-duration: 0.3s;
-    display: flex;
+/* Hover effect */
+.project-item:hover {
+  background-color: skyblue;
+  transform: scale(1.05); /* Slight enlargement on hover */
+}
 
-    justify-content: center; /* Horizontal centering */
-    align-items: center;     /* Vertical centering */
-  }
+/* Project title styling */
+.project-item h3 {
+  font-size: 1.5em;
+  margin: 0;
+  line-height: 1.4em;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-  .project-item:hover {
-    background-color: skyblue;
-  }
-
-/* Reserve space for the description but keep it hidden */
+/* Hidden description before hover */
 .project-description {
   opacity: 0;
   max-height: 0;
@@ -52,23 +58,15 @@
   color: #555;
 }
 
-/* When hovering over the item, reveal the description */
+/* Show description on hover */
 .project-item:hover .project-description {
   opacity: 1;
-  max-height: 100px; /* Ensure the description fits within the reserved space */
+  max-height: 100px; /* Show description on hover */
 }
 
-h3 {
-  left: 250;
-}
-
-.click-info {
-  font-size: 0.9em;
-  color: #888;
-}
-
+/* Media query for mobile devices */
 @media (max-width: 768px) {
   .projects-grid {
-    grid-template-columns: 1fr; /* Stack on mobile */
+    grid-template-columns: 1fr; /* Stack items on smaller screens */
   }
 }

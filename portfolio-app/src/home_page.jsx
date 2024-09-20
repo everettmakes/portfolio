@@ -1,5 +1,25 @@
 import React from "react";
 import ProjectsGrid from "./projects_grid";
+import "./App.css";
+
+const Navbar = () => {
+    const scrollToSection = (id) => {
+        document.getElementById(id).scrollIntoView({
+            behavior: 'smooth',
+            block: 'start',
+        });
+    };
+
+    return (
+        <nav>
+            <ul>
+                <li onClick={() => scrollToSection("welcomeSection")}>Welcome</li>
+                <li onClick={() => scrollToSection("projectsSection")}>Projects</li>
+                <li onClick={() => scrollToSection("contactSection")}>Contact</li>
+            </ul>
+        </nav>
+    );
+};
 
 const Welcome = () => {
     return (
@@ -34,11 +54,29 @@ const Contact = () => {
 };
  
 const HomePage = () => {
+    const scrollToSection = (id) => {
+        document.getElementById(id).scrollIntoView({
+            behavior: 'smooth',
+            block: 'start',
+        });
+    };
+
     return (
         <div>
-            <Welcome />
-            <Projects />
-            <Contact />
+            <section id="welcomeSection">
+                <Welcome />
+            </section>
+            <section id="projectsSection">
+                <Projects />
+            </section>
+            <section id="contactSection">
+                <Contact />
+            </section>
+            <div className="floating-buttons">
+                <button className="myButton" onClick={() => scrollToSection("welcomeSection")}>Welcome</button>
+                <button className="myButton" onClick={() => scrollToSection("projectsSection")}>Projects</button>
+                <button className="myButton" onClick={() => scrollToSection("contactSection")}>Contact</button>
+            </div>
         </div>
     );
 };

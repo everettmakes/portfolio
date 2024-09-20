@@ -6,7 +6,7 @@ const projectData = [
     id: 1,
     title: "Scotland Yard",
     description: "I completed this coursework in Java",
-    url: "private", // Simulating private link
+    url: "https://github.com/joshever/SY",
   },
   {
     id: 2,
@@ -22,12 +22,6 @@ const projectData = [
   },
   {
     id: 4,
-    title: "faysmatta",
-    description: "This is a full stack MERN app",
-    url: "https://example.com/faysmatta", // Public link
-  },
-  {
-    id: 5,
     title: "Kaggle",
     description: "Here you can see my data science activities on Kaggle",
     url: "https://kaggle.com", // Public link
@@ -44,7 +38,11 @@ const Project = ({ project }) => {
   };
 
   return (
-    <div className="project-item" onClick={handleClick}>
+    <div
+      className={`project-item ${project.url === "private" ? "private" : ""}`}
+      onClick={handleClick}
+      aria-label={`View details of ${project.title}`}
+    >
       <h3>{project.title}</h3>
       <p className="project-description">{project.description}</p>
     </div>
