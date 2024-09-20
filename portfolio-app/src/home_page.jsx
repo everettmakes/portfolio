@@ -1,37 +1,36 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import ProjectsGrid from "./projects_grid";
 import "./App.css";
-
-const Navbar = () => {
-    const scrollToSection = (id) => {
-        document.getElementById(id).scrollIntoView({
-            behavior: 'smooth',
-            block: 'start',
-        });
-    };
-
-    return (
-        <nav>
-            <ul>
-                <li onClick={() => scrollToSection("welcomeSection")}>Welcome</li>
-                <li onClick={() => scrollToSection("projectsSection")}>Projects</li>
-                <li onClick={() => scrollToSection("contactSection")}>Contact</li>
-            </ul>
-        </nav>
-    );
-};
+import profileImg from './profile.jpg';
 
 const Welcome = () => {
+    const [showText, setShowText] = useState(false);
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setShowText(true);
+        }, 250); // Adjust delay as needed
+        return () => clearTimeout(timer);
+    }, []);
+
     return (
         <div id="welcome">
-        <div id="welcomeText">
-        <div id="keyWord">Welcome!</div>
-        <b>I am Joshua Everett, an aspiring Machine Learning Engineer currently studying Computer Science at the University of Bristol. 
-        This portfolio highlights my projects and skills, 
-        showcasing my dedication to mastering machine learning and more.</b>
-        </div>
-        <div id="welcomeImage">
-        </div>
+            <div id="welcomeText">
+                <div id="keyWord">
+                    {showText ? (
+                        <span className="typing">Welcome!</span>
+                    ) : (
+                        "Welcome!"
+                    )}
+                </div>
+                <b>
+                    I am Joshua Everett, an aspiring Machine Learning Engineer currently studying Computer Science at the University of Bristol. 
+                    This portfolio highlights my projects and skills, showcasing my dedication to mastering machine learning and more.
+                </b>
+            </div>
+            <div id="welcomeImage">
+                <img src={profileImg} alt="Joshua Everett" />
+            </div>
         </div>
     );
 };

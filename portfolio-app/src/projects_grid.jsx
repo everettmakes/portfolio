@@ -6,25 +6,25 @@ const projectData = [
     id: 1,
     title: "Scotland Yard",
     description: "I completed this coursework in Java",
-    url: "https://github.com/joshever/SY",
+    url: "https://github.com/everettmakes/ScotlandYard/blob/main/report.pdf",
   },
   {
     id: 2,
     title: "Marine Conservation App",
     description: "My team came top in the year for our project",
-    url: "https://example.com/marine-conservation", // Public link
+    url: "https://marineconservationapp.com/",
   },
   {
     id: 3,
     title: "Game of Life",
     description: "I completed this coursework in C",
-    url: "private", // Simulating private link
+    url: "https://github.com/everettmakes/GameOfLife/blob/main/report%20.pdf",
   },
   {
     id: 4,
     title: "Kaggle",
     description: "Here you can see my data science activities on Kaggle",
-    url: "https://kaggle.com", // Public link
+    url: "https://www.kaggle.com/jevrett",
   },
 ];
 

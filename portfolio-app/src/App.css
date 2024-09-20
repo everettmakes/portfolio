@@ -42,18 +42,16 @@ section {
 }
 
 #welcomeSection {
-  padding: 80px;
   text-align: left;
+  padding-left: 100px;
 }
 
 #projectsSection {
   background-color: #f0f0f0; /* Optional: Different background for visibility */
-  padding: 80px;
 }
 
 #contactSection {
   background-color: #e0e0e0; /* Optional: Different background for visibility */
-  padding: 80px;
 }
 
 /* Floating button styling */
@@ -119,4 +117,46 @@ section {
   font-weight: 800;
   text-align: left;
   padding: 80px;
+}
+
+#welcomeImage {
+  display: flex;
+  float: right;
+  justify-content: center; /* Center the image */
+  align-items: center; /* Vertically center the image */
+  width: 50%; /* Adjust as needed */
+}
+
+#welcomeImage img {
+  max-width: 60%; /* Ensure the image is responsive */
+  height: auto; /* Maintain aspect ratio */
+  padding: 20px;
+  border-radius: 50px;
+}
+
+@keyframes typing {
+  from {
+      width: 0;
+  }
+  to {
+      width: 25%;
+  }
+}
+
+@keyframes blink {
+  0%, 100% { border-color: transparent; }
+  50% { border-color: black; }
+}
+
+.typing {
+  display: inline-block;
+  overflow: hidden; /* Ensures the text is hidden until it appears */
+  white-space: nowrap; /* Prevents text wrapping */
+  border-right: 2px solid; /* Simulates a cursor */
+  animation: typing 3s steps(15, end) forwards; /* Use forwards to keep the text visible */
+}
+
+.cursor {
+  display: inline-block;
+  animation: blink 0.75s step-end infinite; /* Blinking effect for the cursor */
 }

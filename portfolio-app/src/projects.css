@@ -19,8 +19,8 @@
   cursor: pointer;
   color: #141414;
   margin: 5px;
-  height: 300px;
-  width: 300px;
+  height: 250px;
+  width: 250px;
   opacity: 1;
   transition: transform 0.3s ease, background-color 0.3s ease;
   display: flex;
