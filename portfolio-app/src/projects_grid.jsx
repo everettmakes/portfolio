@@ -17,7 +17,7 @@ const projectData = [
     id: 2,
     title: "Marine Conservation App",
     description: "My team came top in the year for our project",
-    url: "https://marineconservationapp.com/",
+    url: "https://github.com/joshever/2023-MarineConservationApp",
     img: mcaImg,
   },
   {
@@ -31,7 +31,7 @@ const projectData = [
     id: 4,
     title: "Kaggle",
     description: "Here you can see my data science activities on Kaggle",
-    url: "https://www.kaggle.com/jevrett",
+    url: "https://www.kaggle.com/jevrett/",
     img: kaggleImg,
   },
 ];
